@@ -1,0 +1,1 @@
+@extends('tradetracker::layouts.main')
