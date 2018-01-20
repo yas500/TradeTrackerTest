@@ -1,8 +1,25 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+namespace Mg\TradeTracker\Helpers\Parser;
 
+/**
+ * @author Mohamed Ghareeb <mohamedigm@gmail.com>
+ */
+class UrlParser extends AbstractParser
+{
+    public function __construct($tag_name)
+    {
+        parent::__construct($tag_name);
+    }
+
+    /**
+     * sanitize as number
+     * 
+     * @param string $text
+     * @return flot
+     */
+    public function sanitize($text)
+    {
+        return filter_var($text, FILTER_SANITIZE_URL);
+    }
+}

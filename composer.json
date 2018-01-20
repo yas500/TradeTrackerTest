@@ -26,5 +26,10 @@
             "Mg\\TradeTracker\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Mg\\TradeTracker\\Test\\": "test/"
+        }
+    },
     "repositories": []
 }

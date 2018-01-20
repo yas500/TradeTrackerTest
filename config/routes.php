@@ -2,11 +2,11 @@
 
 Route::group([
     'prefix' => mg_base_url(),
-    'middleware' => ['web'],
     'namespace' => 'Mg\TradeTracker\Controllers'], function() {
 
     Route::group(['prefix' => '/api'], function() {
-        
+        Route::get('/xml', 'HomeController@parse');
+        Route::post('/xml', 'HomeController@parse');
     });
 
     Route::group(['prefix' => '/'], function() {
@@ -16,4 +16,8 @@ Route::group([
         // any matching other redirect
         Route::get('/{any}', 'HomeController@index')->where('any', '.*');
     });
+});
+
+Route::get('/', function() {
+    return redirect(mg_base_url());
 });
