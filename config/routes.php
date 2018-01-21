@@ -19,5 +19,5 @@ Route::group([
 });
 
 Route::get('/', function() {
-    return redirect(mg_base_url());
+    return redirect(mg_url('index'));
 });
