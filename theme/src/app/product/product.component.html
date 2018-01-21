@@ -1,0 +1,25 @@
+<div class="col-sm-12">
+    <div class="row">
+        <p-dataScroller styleClass="col-sm-12" [value]="data" [rows]="50" [lazy]="true" (onLazyLoad)="loadData($event)">
+            <ng-template let-product pTemplate="item">
+                <div class="col-xs-12 text-center product-item">
+                    <div class="product-image">
+                        <img class="thumbnail" src="{{product.imageURL}}" alt="{{product.name}}" />
+                        <button (click)="quickview(product)" class="btn btn-default">Quick view</button>
+                    </div>
+                    <div class="product-data">
+                        <h3><a target="_blank" href="{{product.productURL}}">{{product.name}}</a></h3>
+                        <div class="sku"><span>#</span><span>{{product.SKU}}</span></div>
+                        <div class="price">
+                            <span>{{product.price}}</span> <span class="currency">{{product.currency}}</span>
+                        </div>
+                        <div class="stock">{{product.stock}}</div>
+                        <p class="product-desc">{{product.description | slice:0:50}}</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </ng-template>
+            <div class="clearfix"></div>
+        </p-dataScroller>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<p-growl [(value)]="msgs"></p-growl>
+
+<div id="search_header" class="navbar" [formGroup]="nForm">
+    <div class="col-xs-12 col-sm-3 pull-left">
+        <div class="logo">
+            <a href="https://tradetracker.com/" rel="home">
+                <object class="logo-svg" type="image/svg+xml" data="https://tradetracker.com/media/2016/12/tradetracker-logo-2.svg"></object>
+            </a>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-8 pull-left">
+        <p-dropdown [options]="cached" formControlName="url" [style]="{'width':'75%'}" editable="true" placeholder="Type xml url"></p-dropdown>
+        <p-button [disabled]="disabled" (onClick)="submit()" icon="fa fa-fw fa-search"  label="Submit" i18n></p-button>
+    </div>
+</div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

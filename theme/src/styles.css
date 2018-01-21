@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+
+.navbar {
+    border-bottom: 1px solid #D5D5D5;
+    margin-bottom: 15px;
+}
+
+.ui-widget.ui-button, .ui-button {
+    height: 32px;
+}
+
+.ui-widget-content {
+    border: none;
+}
+
+.ui-datascroller-list li {
+    width: 25%;
+    float: left;
+}
+
+.ui-datascroller-list {
+    margin-top: 15px;
+}
+
+/** product data **/
+
+.product-item {
+    height: 380px;
+    margin-bottom: 10px;
+    line-break: strict;
+}
+
+.product-image {
+    position: relative;
+    min-height: 200px;
+}
+
+.product-image button {
+    position: absolute;
+    display: none;
+    outline: none;
+    width: 50%;
+    bottom: 2px;
+    z-index: 100;
+    left: 25%;
+    border-radius: 0;
+    border: 1px solid #ccc;
+}
+
+.product-image:hover button {
+    display: inline-block;
+}
+
+.product-data h3 {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.product-data .sku {
+    color: #555;
+    font-size: 14px;
+}
+
+.product-data .price {
+    font-size: 13px;
+    color: #B12704;
+}
+
+.product-data .stock {
+    font-size: 14px;
+    color: #008a00;
+}
+
+.product-data .product-desc {
+    font-size: 12px;
+}
+
+@media (max-width: 992px) {
+    .ui-datascroller-list li {
+        width: 33.3%;
+    }
+}
+
+@media (max-width:768px) {
+    .ui-datascroller-list li {
+        width: 50%;
+    }
+}
+
+@media (max-width:768px) {
+    .ui-datascroller-list li {
+        width: 100%;
+    }
+}
