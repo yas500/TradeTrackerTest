@@ -22,7 +22,7 @@ ng build --op=app
 folder src/Helpers contains products xml parser with ProductsParser class which includes many xml node parsers like in 
 src/Helpers/Parser
 
-solution uses php XmlReader to read xml file url and registers several parser for each unique node type
+solution uses php XmlReader to read xml file url and registers several parsers for each unique node type
 like TextParser for text with specific tag name
 
 Available parsers 
@@ -32,6 +32,7 @@ Mg\TradeTracker\Helpers\Parser\UrlParser
 Mg\TradeTracker\Helpers\Parser\PriceParser
 Mg\TradeTracker\Helpers\Parser\NumberParser
 Mg\TradeTracker\Helpers\Parser\CategoryParser
+Mg\TradeTracker\Helpers\Parser\FieldParser
 ```
 
 so you can implement your own parser
