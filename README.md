@@ -39,3 +39,8 @@ so you can implement your own parser
 
 also there is stream function in ProductsParser class can be used to stream with web socket pushing with
 callback function
+
+# Docker image
+```
+https://hub.docker.com/r/yas500/tradetracker
+```
